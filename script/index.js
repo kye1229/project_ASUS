@@ -1,113 +1,220 @@
-const bnrSlide = new Swiper('.bnr_swiper .bnr_wrap',{
-    autoplay:{
-        delay:2000,
-        disableOnInteraction:false,
-    },
-    loop:true,
+const header = document.querySelector('.header');
+const mainSwiper = new Swiper('#main',{
+    direction:'vertical',
+    mousewheel:true,
     speed:1000,
-    pagination:{
-        el:'.bnr_wrap + .swiper-pagination',
-        type:'bullets',
-        dynamicBullets:true,
-    },
-    navigation:{
-        nextEl:'.bnr_swiper .next',
-        prevEl:'.bnr_swiper .prev',
+    on:{
+        slideChangeTransitionEnd:function(){
+            setTimeout(()=> ScrollTrigger.refresh(),0)
+        }
     },
 });
 
-const newNum = document.querySelector('.new_wrap .now_page');
-const newNow = document.querySelectorAll('.new_wrap .swiper-slide');
-const newTotalNum = document.querySelector('.new_wrap .total_page');
-newTotalNum.innerText = newNow.length/4;
-const newSlide = new Swiper('.new_wrap .new_swiper',{
+const newsSwiper = new Swiper('#main .news_swiper',{
     speed:1000,
-    navigation:{
-        prevEl:'.new_wrap .prev',
-        nextEl:'.new_wrap .next',
-    },
-    on:{
-        slideChange:function(){
-            newNum.textContent = ((this.realIndex+1*newTotalNum.innerText)/4)+0.5;
-        }
-    },
-    slidesPerView:4,
-    slidesPerGroup:4,
-});
-const dealNum = document.querySelector('.hot_deal_wrap .now_page');
-const dealNow = document.querySelectorAll('.hot_deal_wrap .swiper-slide');
-const dealTotalNum = document.querySelector('.hot_deal_wrap .total_page');
-dealTotalNum.innerText = dealNow.length/4;
-const dealSlide = new Swiper('.hot_deal_wrap .deal_swiper',{
-    speed:1000,
-    navigation:{
-        prevEl:'.hot_deal_wrap .prev',
-        nextEl:'.hot_deal_wrap .next',
-    },
-    on:{
-        slideChange:function(){
-            dealNum.textContent = ((this.realIndex+1*dealTotalNum.innerText)/4)+0.5;
-        }
-    },
-    slidesPerView:4,
-    slidesPerGroup:4,
+    slidesPerView:3.2,
+    spaceBetween:200,
 });
 
-const bestCategory = document.querySelectorAll('.best_categories a');
-function bestRemove(){
-    bestCategory[0].classList.remove('active');
-    bestCategory[1].classList.remove('active');
-    bestCategory[2].classList.remove('active');
-    bestCategory[3].classList.remove('active');
-    bestCategory[4].classList.remove('active');
-    bestCategory[5].classList.remove('active');
-}
-bestCategory[0].addEventListener('click', (e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[0].classList.add('active');
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.page2 h2',{
+    scrollTrigger:{
+        trigger:'.page2 h2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
 });
-bestCategory[1].addEventListener('click',(e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[1].classList.add('active');
-})
-bestCategory[2].addEventListener('click',(e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[2].classList.add('active');
-})
-bestCategory[3].addEventListener('click',(e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[3].classList.add('active');
-})
-bestCategory[4].addEventListener('click',(e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[4].classList.add('active');
-})
-bestCategory[5].addEventListener('click',(e)=>{
-    e.preventDefault();
-    bestRemove();
-    bestCategory[5].classList.add('active');
-})
 
-const bestNum = document.querySelector('.best_wrap .now_page');
-const bestNow = document.querySelectorAll('.best_wrap .swiper-slide');
-const bestTotalNum = document.querySelector('.best_wrap .total_page');
-bestTotalNum.innerText = bestNow.length/3;
-const bestSlide = new Swiper('.best_wrap .best_swiper',{
-    speed:1000,
-    navigation:{
-        prevEl:'.best_wrap .prev',
-        nextEl:'.best_wrap .next',
+gsap.to('.vision1 h3',{
+    scrollTrigger:{
+        trigger:'.vision1 h3',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
     },
-    on:{
-        slideChange:function(){
-            bestNum.textContent = ((this.realIndex*bestTotalNum.innerText)/6)+1;
-        }
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.vision2 h3',{
+    scrollTrigger:{
+        trigger:'.vision2 h3',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
     },
-    slidesPerView:3,
-    slidesPerGroup:3,
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page3 h2',{
+    scrollTrigger:{
+        trigger:'.page3 h2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page3_top p',{
+    scrollTrigger:{
+        trigger:'.page3_top p',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page3 .cdmo1',{
+    scrollTrigger:{
+        trigger:'.page3 .cdmo1',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse', 
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page3 .cdmo2',{
+    scrollTrigger:{
+        trigger:'.page3 .cdmo2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse', 
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page3 .cdmo3',{
+    scrollTrigger:{
+        trigger:'.page3 .cdmo3',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse', 
+    },
+    opacity:1,
+    top:0,
+});
+
+gsap.to('.page4 h2',{
+    scrollTrigger:{
+        trigger:'.page4 h2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page4 .quality_list p',{
+    scrollTrigger:{
+        trigger:'.page4 .quality_list p',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
+});
+
+gsap.to('.page5 h2',{
+    scrollTrigger:{
+        trigger:'.page5 h2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page5 p',{
+    scrollTrigger:{
+        trigger:'.page5 p',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page5 .news_swiper',{
+    scrollTrigger:{
+        trigger:'.page5 .news_swiper',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page6 h2',{
+    scrollTrigger:{
+        trigger:'.page6 h2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+gsap.to('.page6_top p',{
+    scrollTrigger:{
+        trigger:'.page6_top p',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    left:0,
+});
+
+gsap.to('.page6 .talent1',{
+    scrollTrigger:{
+        trigger:'.page6 .talent1',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page6 .talent2',{
+    scrollTrigger:{
+        trigger:'.page6 .talent2',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page6 .talent3',{
+    scrollTrigger:{
+        trigger:'.page6 .talent3',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
+});
+gsap.to('.page6 .talent4',{
+    scrollTrigger:{
+        trigger:'.page6 .talent4',
+        start:'top 80%',
+        end:'top 20%',
+        toggleActions:'play reverse restart reverse',
+    },
+    opacity:1,
+    top:0,
 });
