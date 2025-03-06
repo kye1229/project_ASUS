@@ -240,7 +240,6 @@ main .guide_wrap a p:nth-child(3) {
 main .guide_wrap a p:nth-child(3) span {
     font-size:1.56rem; letter-spacing:-0.02em; font-weight:600; line-height:1.4;
 }
-main .guide_wrap a .go_link {background-color:#fff; padding:5px 10px; border-radius:20px; font-size:0.81rem; font-weight:600; display:none;}
 /* guide 끝 */
 main .event_wrap {max-width:1760px; margin:0 auto 140px;}
 main .event_wrap .event_title {display:flex; justify-content:space-between; margin-bottom:25px;}
