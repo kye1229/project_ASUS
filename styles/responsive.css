@@ -1,11 +1,17 @@
 /* 1250px */
 @media screen and (max-width:1250px){
-    header .header_left nav {text-wrap:nowrap;}
-    header .header_left nav li .sub_tab {padding:0 50px; }
-    header .header_left nav ul li .sub_tab .sub_contents { display:flex; flex-flow:row wrap; width:924px; height:auto;}
+    header .header_left nav, header .header_right li:last-child {display:none;}
+    header .header_right li .more_tab {display:inline-block;}
+    header .header_right li {width:20px;}
+    footer .footer_right .sns_icon a {width:30px;}
+    footer .footer_right > * {margin-bottom:10px;}
+    footer .footer_right .asus_family {margin-bottom:10px;}
+    footer .footer_right .asus_family p a {width:52px; display: inline-block;}
+    footer .footer_right .asus_family p a img {width:100%;}
 }
 /* 1000px */
 @media screen and (max-width:1000px){
+    .h_top p img {width:20px; position:relative; top:2px;}
     header .header_left h1 {margin-right:30px;}
     main > * {padding:0 80px;}
     main .bnr_swiper {padding:0; margin-bottom:100px;}
@@ -53,29 +59,29 @@
     main .care_wrap .care_list .care a p {font-size:1.13rem;}
     main .care_wrap .care_list .care > p {line-height:1.4;}
     main .care_wrap .care_list .care a p img {margin-bottom:15px;}
-    footer .footer_right > * {margin-bottom:10px;}
-    footer .footer_right .sns_icon a {width:30px;}
-    footer .footer_right .asus_family {margin-bottom:10px;}
-    footer .footer_right .asus_family p a {width:52px; display: inline-block;}
-    footer .footer_right .asus_family p a img {width:100%;}
 }
 /* 950px */
 @media screen and (max-width:950px){
-    header .header_left nav, header .header_right .support_consumer {display:none;}
-    header .header_right .more_tab {display:inline-block;}
-    header .header_right img {width:20px;}
+    footer {flex-flow:column nowrap; align-items:flex-start; padding:20px 15px; height:380px;}
+    footer {height:389px;}
+    footer .footer_left {margin-bottom:30px;}
+    footer .footer_left .left_top {margin-bottom:30px;}
+    footer .footer_left .left_top a {font-size:0.75rem; margin-right:15px;}
+    footer .footer_right {text-align:left;width:100%; position:relative;}
+    footer .footer_right .call_center {position:absolute; right:0; bottom:0; text-align:right;}
 }
-/* 700px */
-@media screen and (max-width:700px) {
+/* 600px */
+@media screen and (max-width:600px) {
+    header .header_right li:first-child {display:none;}
+    header .header_right li:nth-child(2) {display:block;}
     .h_top {height:30px;}
     .h_top p {font-size:0.75rem; line-height:30px;}
     .h_top p #close_btn {top:3px;}
     header {padding:0 15px;}
     header .header_left h1 {width:65px;}
     header .header_left nav {display:none;}
-    header .header_right a {margin-right:15px;}
-    header .header_right a:last-child {margin-right:0;}
-    header .header_right .support_consumer {display:none;}
+    header .header_right li a {margin-right:15px;}
+    header .header_right li a:last-child {margin-right:0;}
     header .search_popup {top:-30px;}
     header .search_popup #close_btn {position:absolute; right:30px; top:30px;}
     header .search_popup .search_contents #search_txt {width:420px;}
@@ -163,10 +169,4 @@
     main .care_wrap .care_list .care a p:first-child {position:relative; z-index:10; overflow:hidden;}
     main .care_wrap .care_list .care a p:nth-child(2) {position:absolute; left:0; top:0; color:#fff; font-size:0.88rem; padding:22px 0 0 24px; z-index:30;}
     main .care_wrap .care_list .care > p {color:#fff; position:absolute; z-index:50; left:24px; top:40%; width:300px; z-index:30;}
-    footer {flex-flow:column nowrap; align-items:flex-start; padding:20px 15px; height:380px;}
-    footer .footer_left {margin-bottom:30px;}
-    footer .footer_left .left_top {margin-bottom:30px;}
-    footer .footer_left .left_top a {font-size:0.75rem; margin-right:20px;}
-    footer .footer_right {text-align:left;width:100%; position:relative;}
-    footer .footer_right .call_center {position:absolute; right:0; bottom:0; text-align:right;}
 }
