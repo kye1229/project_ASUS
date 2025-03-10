@@ -24,7 +24,7 @@ header .header_left nav ul li > a {font-size:0.88rem; font-weight:500; letter-sp
 header .header_left nav ul li:first-child > a {color:#015EC5; font-weight:600;}
 /* submenu start */
 header .header_left nav ul li .sub_tab {display:none; position:absolute; left:0; top:80px; z-index:999; width:100%;background-color:#f9f9f9;}
-header .header_left nav ul li .sub_tab .sub_contents {  height:350px; width:1760px; margin:0 auto; display:flex; padding:30px 50px;}
+header .header_left nav ul li .sub_tab .sub_contents {  height:auto; width:1760px; margin:0 auto; display:flex; padding:30px 50px;}
 header .header_left nav ul li .sub_tab .sub_contents .tab {margin-right:30px; width:150px;}
 header .header_left nav ul li .sub_tab .sub_contents .tab h2 {margin-bottom:10px; font-weight:500; font-size:0.88rem; color:#313131;}
 header .header_left nav ul li .sub_tab .sub_contents .tab_menu1 h2:nth-of-type(2) {margin-top:10px;}
