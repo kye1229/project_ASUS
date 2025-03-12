@@ -227,6 +227,10 @@
 }
 
 /* 리스트 페이지 end, 상품 상세페이지 start */
+@media screen and (max-width:1440px) {
+    main .sub_bnr {background-position:center; padding:107px 50px;}
+    main .sub_bnr p {}
+}
 @media screen and (max-width:1250px) {
     main .path {padding:0 50px; margin:30px auto 20px;}
     main #product_wrap {padding:0 50px;}
@@ -247,8 +251,6 @@
     main #product_wrap .inform_wrap .select_wrap > * {margin-bottom:25px;}
     main #product_wrap .inform_wrap .select_wrap > * h3 {font-size:0.88rem;}
     main #product_wrap .inform_wrap .select_wrap .btn button {width:213px;}
-    main .sub_bnr {background-position:center; padding:107px 50px;}
-    main .sub_bnr p {background-position:center;}
     main .benefit {padding:0 50px;}
     main .benefit > * {margin-right:10px;}
     main .benefit > * h2, main .benefit > * p {margin-bottom:10px;}
@@ -269,7 +271,8 @@
     main .question_wrap {padding:0 50px;}
 }
 @media screen and (max-width:1000px) {
-
+    main .sub_bnr {padding:50px; height:350px; margin-bottom:80px;}
+    main .sub_bnr p {font-size:0.75rem; font-weight:400;}
 }
 @media screen and (max-width:950px) {
     main .path {padding:0 15px; font-size:0.63rem; text-align:center;}
@@ -289,8 +292,7 @@
     main #product_wrap .inform_wrap .select_wrap > * {margin-bottom:20px;}
     main #product_wrap .inform_wrap .select_wrap > *:nth-child(5) {margin-bottom:30px;}
     main #product_wrap .inform_wrap .select_wrap > *:last-child {margin-bottom:0;}
-    main .sub_bnr {padding:50px; height:auto; margin-bottom:80px;}
-    main .sub_bnr p {font-size:0.75rem; font-weight:400;}
+    main .sub_bnr {height:auto;}
     main .benefit {flex-flow:column nowrap; margin-bottom:80px;}
     main .benefit > * {margin-right:0; margin-bottom:50px;}
     main .benefit > *:last-child {margin:0;}
