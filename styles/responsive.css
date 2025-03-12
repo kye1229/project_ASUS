@@ -271,7 +271,7 @@
     main .question_wrap {padding:0 50px;}
 }
 @media screen and (max-width:1000px) {
-    main .sub_bnr {padding:50px; height:350px; margin-bottom:80px;}
+    main .sub_bnr {padding:50px; height:auto; margin-bottom:80px;}
     main .sub_bnr p {font-size:0.75rem; font-weight:400;}
 }
 @media screen and (max-width:950px) {
